@@ -2,7 +2,7 @@
 
 @section('content')
     <!-- Content Wrapper. Contains page content -->
-  <div class="content-wrapper">
+  
     <!-- Content Header (Page header) -->
     <div class="content-header">
       <div class="container-fluid">
@@ -45,9 +45,9 @@
             <!-- small box -->
             <div class="small-box bg-success">
               <div class="inner">
-                <h3>53</h3>
-
-                <p>My Users</p>
+                
+                <h3>33</h3>
+                <p>My Players</p>
               </div>
               <div class="icon">
                 <i class="ion ion-stats-bars"></i>
@@ -60,9 +60,10 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>44</h3>
-
-                <p>User Registrations</p>
+              
+                <h3>40</h3>
+                
+                <p>My Coaches</p>
               </div>
               <div class="icon">
                 <i class="ion ion-person-add"></i>

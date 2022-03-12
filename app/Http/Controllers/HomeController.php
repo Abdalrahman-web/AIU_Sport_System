@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
+use App\Http\Requests;
+use App\Http\Controllers\Controller;
+use App\Models\Player;
 
 class HomeController extends Controller
 {
@@ -23,6 +27,17 @@ class HomeController extends Controller
      */
     public function index()
     {
+       
         return view('home');
     }
+
+
+    //عم بجرب database فقط 
+    /*
+    public function index(){
+        $users = DB::select('select * from student_details');
+        return view('stud_view',['users'=>$users]);
+        }
+*/
+
 }

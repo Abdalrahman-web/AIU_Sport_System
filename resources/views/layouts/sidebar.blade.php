@@ -3,7 +3,7 @@
         <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
              alt="AdminLTE Logo"
              class="brand-image img-circle elevation-3">
-        <span class="brand-text font-weight-light">AIU Sport System</span>
+        <span style="color:#00a8ff" class="brand-text font-weight-light">AIU Sport System</span>
     </a>
 
     <div class="sidebar">

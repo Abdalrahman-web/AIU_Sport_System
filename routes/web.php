@@ -29,7 +29,14 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 
 Auth::routes();
 
-Route::namespace('Front')->group(function(){
+Route::group(['prefix'=>'add'],function(){
 
-    Route::get('/users',[App\Http\Controllers\Front\AddController::class,'addplayer']);
+    Route::get('/insert',[App\Http\Controllers\Front\AddController::class,'insert'])->name('add.insert');
+    Route::post('/create',[App\Http\Controllers\Front\AddController::class,'create'])->name('add.create');
+});
+
+Route::group(['prefix'=>'addcoache'],function(){
+
+    Route::get('/insert',[App\Http\Controllers\Front\AddcoacheController::class,'insert'])->name('addcoache.insert');
+    Route::post('/create',[App\Http\Controllers\Front\AddcoacheController::class,'create'])->name('addcoache.create');
 });
