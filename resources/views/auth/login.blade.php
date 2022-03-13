@@ -87,7 +87,6 @@
 
 </div>
 <!-- /.login-box -->
-
 <script src="{{ mix('js/app.js') }}" defer></script>
 
 </body>
