@@ -19,6 +19,13 @@ class AddController extends Controller
        $this->middleware('auth');
    }
 
+
+   public function show(){
+
+      $players = Player::all();
+      return view('showplayers',compact('players'));
+   }
+
    
    public function insert(){
      // $urlData = getURLList();
@@ -30,13 +37,14 @@ class AddController extends Controller
   
       $rules = [
        'fullname' => 'required|string|unique:players,fullname|min:3|max:255',
-       'password' => 'required|string|min:8|max:8',
+       'password' => 'required|string|min:8|max:16',
        'email' => 'required|string|email|unique:players,email|min:9|max:255',
+       'image' => 'nullable|mimes:jpeg , jpg , png',
        'age' => 'required|string|max:2',
        'height' => 'required|max:3',
        'weight' => 'required|max:3',
-       'disease' => 'string||max:255',
-       'skill' => 'string|max:100'
+       'disease' => 'nullable|max:255',
+       'skill' => 'nullable|string|max:100'
     ];
     $validator = Validator::make($request->all(),$rules);
     if ($validator->fails()) {
@@ -52,6 +60,14 @@ class AddController extends Controller
          $student->password = $data['password'];
          $student->age = $data['age'];
          $student->email = $data['email'];
+
+         if($request->hasfile('image')){
+            $file = $data->file('image');
+            $filename = time() . '.' . $file->getClientOriginalExtension();
+            $file->move('uploads/images/',$filename);
+         $student->image = $filename;
+         }
+
          $student->height = $data['height'];
          $student->weight = $data['weight'];
          $student->disease = $data['disease'];

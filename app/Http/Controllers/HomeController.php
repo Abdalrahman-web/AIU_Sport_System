@@ -7,6 +7,9 @@ use DB;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\Models\Player;
+use App\Models\Coache;
+use App\Models\User;
+use App\Models\Note;
 
 class HomeController extends Controller
 {
@@ -27,8 +30,13 @@ class HomeController extends Controller
      */
     public function index()
     {
-       
-        return view('home');
+
+        $players = Player::count();
+        $coaches = Coache::count();
+        $admins = User::count();
+        $notes = Note::count();
+
+        return view('home',compact('players','coaches','admins','notes'));
     }
 
 

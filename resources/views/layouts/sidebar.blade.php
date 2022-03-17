@@ -7,6 +7,19 @@
     </a>
 
     <div class="sidebar">
+
+    <div class="sidebar">
+      <!-- Sidebar user (optional) -->
+      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+        <div class="image">
+        <i class="nav-icon fas fa-tachometer-alt"></i>
+        <!--  <img src="" class="img-circle elevation-2" alt="User Image"> -->
+        </div>
+        <div class="info">
+          <a href="#" class="d-block">Abd Alrahman Abonaaj</a>
+        </div>
+      </div>
+      
         <nav class="mt-2">
             <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                 @include('layouts.menu')
