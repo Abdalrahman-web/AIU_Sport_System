@@ -39,7 +39,7 @@ class AddController extends Controller
        'fullname' => 'required|string|unique:players,fullname|min:3|max:255',
        'password' => 'required|string|min:8|max:16',
        'email' => 'required|string|email|unique:players,email|min:9|max:255',
-       'image' => 'nullable|mimes:jpeg , jpg , png',
+       'image' => 'nullable|mimes:jpeg,jpg,png',
        'age' => 'required|string|max:2',
        'height' => 'required|max:3',
        'weight' => 'required|max:3',
@@ -60,18 +60,17 @@ class AddController extends Controller
          $student->password = $data['password'];
          $student->age = $data['age'];
          $student->email = $data['email'];
-
+         $student->height = $data['height'];
+         $student->weight = $data['weight'];
+         $student->disease = $data['disease'];
+         $student->skill = $data['skill'];
          if($request->hasfile('image')){
-            $file = $data->file('image');
+            $file = $request->file('image');
             $filename = time() . '.' . $file->getClientOriginalExtension();
             $file->move('uploads/images/',$filename);
          $student->image = $filename;
          }
 
-         $student->height = $data['height'];
-         $student->weight = $data['weight'];
-         $student->disease = $data['disease'];
-         $student->skill = $data['skill'];
          $student->save();
           return redirect('add/insert')->with('status',"Insert successfully");
        }
