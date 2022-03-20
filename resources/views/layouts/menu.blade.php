@@ -20,13 +20,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('add.insert') }}" class="nav-link">
+                <a href="{{ route('add.insert') }}" class="nav-link {{ Request::is() ? 'active':'' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Player</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('addcoache.insert') }}" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
+                <a href="{{ route('addcoache.insert') }}" class="nav-link {{ Request::is('') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Coache</p>
                 </a>

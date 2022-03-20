@@ -39,3 +39,21 @@ Route::group(['prefix'=>'show'],function(){
     Route::get('/players',[App\Http\Controllers\Front\AddController::class,'show'])->name('show.players');
     Route::get('/admins',[App\Http\Controllers\Front\AdminController::class,'index'])->name('show.admins');
 });
+
+
+Route::group(['prefix'=>'edit'],function(){
+
+    Route::get('/player/{player_id}',[App\Http\Controllers\Front\AddController::class,'edit'])->name('edit.player');
+    Route::put('/update/{player_id}',[App\Http\Controllers\Front\AddController::class,'update'])->name('update.player');
+    Route::get('/coache/{id}',[App\Http\Controllers\Front\AddcoacheController::class,'edit'])->name('edit.coache');
+    Route::put('/updatec/{id}',[App\Http\Controllers\Front\AddcoacheController::class,'update'])->name('update.coache');
+});
+
+Route::group(['prefix'=>'delete'],function(){
+
+    Route::get('/player/{player_id}',[App\Http\Controllers\Front\AddController::class,'destroy'])->name('delete.player');
+    Route::get('/coache/{id}',[App\Http\Controllers\Front\AddcoacheController::class,'destroy'])->name('delete.coache');
+  
+});
+
+Route::get('/scadule', [App\Http\Controllers\Front\ScaduleController::class, 'index'])->name('scadule');

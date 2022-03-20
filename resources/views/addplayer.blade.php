@@ -54,7 +54,7 @@
 	<hr style="border-top: 3px double #8c8b8b;">
 <br>
 
-<form action = "{{route('add.create')}}" method = "post" enctype="multipart/form-data">
+<form action = "{{route('add.create')}}"  method = "post" enctype="multipart/form-data">
 <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
 
   <div class="form-row">
@@ -66,7 +66,7 @@
 
     <div class="col-md-4 mb-3">
       <label for="validationServer02">Password</label>
-      <input type="password" class="form-control" id="validationServer02" placeholder="Password" name="password" required>
+      <input type="password" class="form-control" id="validationServer02" autofill="off" placeholder="Password" name="password" required>
 	  
     </div>
     <div class="col-md-4 mb-3">
@@ -76,11 +76,17 @@
         <div class="input-group-prepend">
           <span class="input-group-text" id="inputGroupPrepend3">@</span>
         </div>
-        <input type="email" class="form-control" id="validationServer04" placeholder="Player email" name="email" required>
+        <input type="email" class="form-control" id="validationServer04" autofill="off" placeholder="Player email" name="email" required>
 	
       </div>
     </div>
   </div>
+
+  <div class="col-md-4 mb-3">
+      <label for="validationServer12">ID</label>
+      <input type="text" class="form-control" id="validationServer12" placeholder="Player id" name="player_id" required>
+	  
+    </div>
 
   <div class="form-row">
     <div class="col-md-4 mb-3">
@@ -90,8 +96,8 @@
     </div>
 
     <div class="col-md-4 mb-3">
-      <label for="validationServer05">Image</label>
-      <input type="file" class="form-control" id="validationServer05" placeholder="Player image" name="image" required>
+      <label for="validationServer10">Image</label>
+      <input type="file" class="form-control" id="validationServer10" placeholder="Player image" name="image" >
 	  
     </div>
 </div>

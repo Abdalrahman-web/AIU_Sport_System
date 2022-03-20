@@ -9,7 +9,7 @@ class Player extends Model
 {
     //use HasFactory;
     protected $table = "players";
-    protected $fillable = ['fullname','password','email','image','age','height','weight','disease','skill'];
+    protected $fillable = ['id','player_id','fullname','password','email','image','age','height','weight','disease','skill'];
     protected $hidden = [];
     public $timestamps = true;
 }
