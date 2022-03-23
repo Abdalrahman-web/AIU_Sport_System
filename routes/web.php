@@ -57,3 +57,7 @@ Route::group(['prefix'=>'delete'],function(){
 });
 
 Route::get('/scadule', [App\Http\Controllers\Front\ScaduleController::class, 'index'])->name('scadule');
+
+
+Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
+Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
