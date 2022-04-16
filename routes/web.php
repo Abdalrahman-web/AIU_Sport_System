@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FullCalenderController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -56,8 +56,14 @@ Route::group(['prefix'=>'delete'],function(){
   
 });
 
-Route::get('/scadule', [App\Http\Controllers\Front\ScaduleController::class, 'index'])->name('scadule');
 
+Route::get('full-calender', [FullCalenderController::class, 'index'])->name('full-calender');
 
+Route::post('full-calender/action', [FullCalenderController::class, 'action']);
+
+Route::get('/post',[App\Http\Controllers\PostController::class, 'index'])->name('post.index');
+Route::post('/post',[App\Http\Controllers\PostController::class, 'insert'])->name('post.insert');
+/*
 Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');
+*/

@@ -76,9 +76,9 @@
             <!-- small box -->
             <div class="small-box bg-warning">
               <div class="inner">
-                <h3>{{ $notes }}</h3>
+                <h3>{{ $posts }}</h3>
 
-                <p>Notifications</p>
+                <p>Posts</p>
               </div>
               <div class="icon">
                 <i class="ion ion-pie-graph"></i>
@@ -110,9 +110,11 @@
                   </ul>
                 </div>
               </div>
+              
               <!-- /.card-header -->
               <div class="card-body">
                 <ul class="todo-list" data-widget="todo-list">
+                
                   <li>
                     <!-- drag handle -->
                     <span class="handle">
@@ -125,7 +127,7 @@
                       <label for="todoCheck1"></label>
                     </div>
                     <!-- todo text -->
-                    <span class="text">Design a nice theme</span>
+                    <span class="text">Design new theme</span>
                     <!-- Emphasis label -->
                     <small class="badge badge-danger"><i class="far fa-clock"></i> 2 mins</small>
                     <!-- General tools such as edit or delete-->

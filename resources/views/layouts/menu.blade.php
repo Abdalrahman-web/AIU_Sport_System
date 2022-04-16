@@ -68,16 +68,31 @@
             </ul>
           </li>
 
-
-
-<li class="nav-item">
-    <a href="" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
+   <li class="nav-item">
+    <a href="{{route('full-calender')}}" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
     <i class="bi bi-chat-square-text"></i>
-        <p>Send Note</p>
+        <p>Scadule</p>
     </a>
 
 </li>
 
-<li class="nav-item d-none d-sm-inline-block">
-        <a href="#" class="nav-link">Contact</a>
-      </li>
+
+
+<li class="nav-item">
+    <a href="{{route('post.index')}}" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
+    <i class="bi bi-chat-square-text"></i>
+        <p>Post</p>
+    </a>
+
+</li>
+
+<li class="nav-item">
+    <a href="" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
+    <i class="bi bi-chat-square-text"></i>
+        <p>Content</p>
+    </a>
+
+</li>
+
+
+
