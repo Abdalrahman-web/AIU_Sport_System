@@ -5,13 +5,11 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Offer extends Model
 {
     use HasFactory;
-
-    protected $table = "posts";
-    protected $fillable = [
-        'title','description','image','is_publish'
-    ];
+    protected $table = "offers";
+    protected $fillable = ['id','offer','title','image'];
+    protected $hidden = [];
     public $timestamps = true;
 }

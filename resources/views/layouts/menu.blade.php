@@ -1,4 +1,3 @@
-
 <li class="nav-item">
     <a href="{{ route('home') }}" class="nav-link {{ Request::is('home') ? 'active' : '' }}">
         <i class="nav-icon fas fa-home"></i>
@@ -20,13 +19,13 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('add.insert') }}" class="nav-link {{ Request::is() ? 'active':'' }}">
+                <a href="{{ route('add.insert') }}" class="nav-link {{ Request::is('add/insert') ? 'active':'' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Player</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('addcoache.insert') }}" class="nav-link {{ Request::is('') ? 'active' : '' }}">
+                <a href="{{ route('addcoache.insert') }}" class="nav-link {{ Request::is('addcoache/insert') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Coache</p>
                 </a>
@@ -48,19 +47,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a href="{{ route('show.players') }}" class="nav-link">
+                <a href="{{ route('show.players') }}" class="nav-link {{ Request::is('show/players') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Players</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('show.coaches') }}" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
+                <a href="{{ route('show.coaches') }}" class="nav-link {{ Request::is('show/coaches') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Coaches</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a href="{{ route('show.admins') }}" class="nav-link">
+                <a href="{{ route('show.admins') }}" class="nav-link {{ Request::is('show/admins') ? 'active' : '' }}">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Admins</p>
                 </a>
@@ -69,7 +68,7 @@
           </li>
 
    <li class="nav-item">
-    <a href="{{route('full-calender')}}" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
+    <a href="{{route('full-calender')}}" class="nav-link {{ Request::is('full-calender') ? 'active' : '' }}">
     <i class="bi bi-chat-square-text"></i>
         <p>Scadule</p>
     </a>
@@ -79,9 +78,17 @@
 
 
 <li class="nav-item">
-    <a href="{{route('post.index')}}" class="nav-link {{ Request::is('addplayer') ? 'active' : '' }}">
+    <a href="{{route('post.index')}}" class="nav-link {{ Request::is('post') ? 'active' : '' }}">
     <i class="bi bi-chat-square-text"></i>
         <p>Post</p>
+    </a>
+
+</li>
+
+<li class="nav-item">
+    <a href="{{route('make.tournament')}}" class="nav-link {{ Request::is('make/tournament') ? 'active' : '' }}">
+    <i class="bi bi-chat-square-text"></i>
+        <p>Make Tournament</p>
     </a>
 
 </li>
@@ -93,6 +100,5 @@
     </a>
 
 </li>
-
 
 

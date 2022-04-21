@@ -19,7 +19,7 @@ class PostController extends Controller
     return view('post');
 }
 
-   public function show(){
+  /* public function show(){
 
     $posts = Post::all();
     
@@ -45,13 +45,13 @@ class PostController extends Controller
               $post = new Post;
               $post->title = $data['title'];
               $post->description = $data['description'];
-             /*
+             
               if($request->hasfile('image')){
                  $file = $request->file('image');
                  $filename = time() . '.' . $file->getClientOriginalExtension();
                  $file->move('uploads/images/',$filename);
               $coache->image = $filename;
-              }*/
+              }
      
               $post->save();
                return redirect('post/insert')->with('status',"Insert successfully");
@@ -89,7 +89,7 @@ class PostController extends Controller
               $post->title = $data['title'];
               $post->description = $data['description'];
      
-            /* if($request->hasfile('image')){
+             if($request->hasfile('image')){
      
                 //to delete the old image
                $dest = 'uploads/images/'.$coache->image;
@@ -101,7 +101,7 @@ class PostController extends Controller
                 $file = $request->file('image');
                 $filename = time() . '.' . $file->getClientOriginalExtension();
                 $file->move('uploads/images/',$filename);
-             $coache->image = $filename;*/
+             $coache->image = $filename;
              
      
              $post->update();
@@ -127,6 +127,6 @@ class PostController extends Controller
      {
         return redirect()->back()->with('message','No Coache is found');
      }
-     }
+     }*/
      
      }

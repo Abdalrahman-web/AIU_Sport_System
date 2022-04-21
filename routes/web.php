@@ -63,6 +63,12 @@ Route::post('full-calender/action', [FullCalenderController::class, 'action']);
 
 Route::get('/post',[App\Http\Controllers\PostController::class, 'index'])->name('post.index');
 Route::post('/post',[App\Http\Controllers\PostController::class, 'insert'])->name('post.insert');
+
+Route::get('/offers',[App\Http\Controllers\OfferController::class, 'index'])->name('offers');
+
+Route::group(['prefix'=>'make'],function(){
+    Route::get('/tournament',[App\Http\Controllers\Match\TournamentController::class,'index'])->name('make.tournament');
+});
 /*
 Route::get('/email', [App\Http\Controllers\EmailController::class, 'create']);
 Route::post('/email', [App\Http\Controllers\EmailController::class, 'sendEmail'])->name('send.email');

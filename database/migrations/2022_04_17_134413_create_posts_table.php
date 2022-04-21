@@ -17,6 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
+            $table->binary('image');
             $table->boolean('is_publish')->default(0);
             $table->timestamps();
         });
