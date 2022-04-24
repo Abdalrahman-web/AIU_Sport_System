@@ -10,7 +10,13 @@ class Task extends Model
 {
     use HasFactory ,HasApiTokens;
     protected $fillable = [
-        'name', 
-        'details'
+        'id', 
+        'player_id',
+        
+        'booking_status'
+        
+        
     ];    
+    
+    
 }
