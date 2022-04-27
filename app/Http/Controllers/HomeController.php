@@ -9,7 +9,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Player;
 use App\Models\Coache;
 use App\Models\User;
-use App\Models\Note;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -34,9 +34,9 @@ class HomeController extends Controller
         $players = Player::count();
         $coaches = Coache::count();
         $admins = User::count();
-        $notes = Note::count();
+        $posts = Post::count();
 
-        return view('home',compact('players','coaches','admins','notes'));
+        return view('home',compact('players','coaches','admins','posts'));
     }
 
 
