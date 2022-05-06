@@ -1,9 +1,9 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <a href="{{ route('home') }}" class="brand-link">
-        <img src="https://assets.infyom.com/logo/blue_logo_150x150.png"
+        <img src="../img/sport.png"
              alt="AdminLTE Logo"
              class="brand-image img-circle elevation-3">
-        <span style="color:#00a8ff" class="brand-text font-weight-light">AIU Sport System</span>
+        <span style="color:#fff" class="brand-text font-weight-light">AIU Sport System</span>
     </a>
 
     <div class="sidebar">
@@ -12,11 +12,11 @@
       <!-- Sidebar user (optional) -->
       <div class="user-panel mt-3 pb-3 mb-3 d-flex">
         <div class="image">
-        <i class="nav-icon fas fa-tachometer-alt"></i>
-        <!--  <img src="" class="img-circle elevation-2" alt="User Image"> -->
+        <img src="../img/aiu.png"  class="brand-image img-circle elevation-3">
+        <!--<img src="" class="img-circle elevation-2" alt="User Image">-->
         </div>
         <div class="info">
-          <a href="#" class="d-block">Abd Alrahman Abonaaj</a>
+          <a href="https://www.aiu.edu.sy/" class="d-block">Arab international university</a>
         </div>
       </div>
       
