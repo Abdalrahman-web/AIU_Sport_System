@@ -14,20 +14,14 @@ return new class extends Migration
     public function up()
     {
         Schema::create('players', function (Blueprint $table) {
-             
-         
             $table->id();
-            $table->string('full_name');
-            $table->string('password');
-            $table->string('email');
-            
-            $table->integer('age');
+            $table->string('player_name');
+            $table->string('email')->unique();
             $table->integer('hight');
             $table->integer('weight');
-            $table->string('dieses');
-            
-            //$table->unsignedBigInteger('team_id');
-           // $table->foreign('team_id')->references('id')->on('teams');
+            $table->string('previus_enj');
+            $table->integer('em_number');
+            //here you ling with regestable after finishing all tables
             $table->timestamps();
         });
     }
